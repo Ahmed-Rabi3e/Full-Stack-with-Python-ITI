@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Interactive Profile Card</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="card">
+      <h1 id="name">Ahmed Rabie</h1>
+      <p id="bio">
+        Web developer with a passion for interactive UI and clean code.
+      </p>
+
+      <button onclick="changeCardColor()">Change Color</button>
+      <button onclick="toggleFunFact()">Add/Remove Fun Fact</button>
+      <button onclick="toggleTheme()">Toggle Theme</button>
+
+      <p id="funFact" class="fun-fact" style="display: none">
+        🎉 Loves pineapple on pizza!
+      </p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

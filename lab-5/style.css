@@ -1,0 +1,65 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333;
+    --card-bg: #f2f2f2;
+    --button-bg: white;
+    --button-text: #000000;
+}
+
+body.dark-theme {
+    --bg-color: #1e1e1e;
+    --text-color: #f9f9f9;
+    --card-bg: #2c2c2c;
+    --button-bg: #555;
+    --button-text: #fff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.card {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+}
+
+.card h1 {
+    margin: 0 0 10px;
+}
+
+.card p {
+    margin: 10px 0;
+}
+
+.card button {
+    margin: 8px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.card button:hover {
+    opacity: 0.9;
+}
+
+.fun-fact {
+    margin-top: 15px;
+    font-style: italic;
+    color: #777;
+}
