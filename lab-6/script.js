@@ -1,4 +1,4 @@
-// Fake API function 
+// Fake API function  
 function fetchStudentData(studentId) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -23,17 +23,19 @@ async function loadStudent(studentId) {
     }
 }
 
-// Load multiple students
+// load students one by one
 async function loadMultipleStudents(studentIds) {
     const multipleDiv = document.getElementById("multipleStudentData");
-    multipleDiv.textContent = "Loading students...";
+    multipleDiv.innerHTML = ""; 
 
-    try {
-        const promises = studentIds.map(id => fetchStudentData(id));
-        const results = await Promise.all(promises);
-        multipleDiv.innerHTML = results.map(data => `<p>${data}</p>`).join('');
-    } catch (error) {
-        multipleDiv.textContent = `Error: ${error}`;
+    for (const id of studentIds) {
+        multipleDiv.innerHTML += `<p>Loading student #${id}...</p>`;
+        try {
+            const data = await fetchStudentData(id);
+            multipleDiv.innerHTML += `<p>${data}</p>`;
+        } catch (error) {
+            multipleDiv.innerHTML += `<p style="color:red;">Error: ${error}</p>`;
+        }
     }
 }
 
