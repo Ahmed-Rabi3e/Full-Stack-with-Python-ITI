@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Profile Saver</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Profile Saver</h1>
+
+      <form id="profileForm" novalidate>
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Your full name" required />
+
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          placeholder="example@domain.com"
+          required
+        />
+
+        <label for="bio">Bio:</label>
+        <textarea
+          id="bio"
+          rows="4"
+          placeholder="Tell us about yourself (max 200 chars)"
+          required
+        ></textarea>
+
+        <button type="submit">Save Profile</button>
+      </form>
+
+      <div id="message" class="message"></div>
+
+      <hr />
+
+      <h2>Saved Profile</h2>
+      <div id="profileDisplay" class="profile-box"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
