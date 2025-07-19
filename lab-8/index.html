@@ -2,12 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AliExpress</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -17,15 +13,16 @@
     </header>
 
     <nav id="categoryNav"></nav>
-
     <main id="productsContainer"></main>
 
-    <div id="singleProductModal" class="modal">
+    <!-- Modal single product -->
+    <div id="productModal" class="modal">
       <div class="modal-content">
-        <span id="closeModal">&times;</span>
-        <div id="singleProduct"></div>
+        <span class="modal-close" id="modalClose">&times;</span>
+        <div id="modalContent">Loading...</div>
       </div>
     </div>
+
     <script src="script.js"></script>
   </body>
 </html>
